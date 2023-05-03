@@ -1,13 +1,5 @@
 terraform {
 
-  cloud {
-    organization = "organization-name"
-
-    workspaces {
-      name = "learn-terraform-cloud"
-    }
-  }
-
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -16,4 +8,15 @@ terraform {
   }
 
   required_version = ">= 0.14.0"
+
+  /* Not needed for VCS */
+  /*
+  cloud {
+    organization = "ignorabilis"
+
+    workspaces {
+      name = "learn-terraform-cloud"
+    }
+  }
+  */
 }
